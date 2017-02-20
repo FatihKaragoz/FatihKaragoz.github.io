@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Fatih Karagöz - Kişisel Blog</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="/css/syntax.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/css/main.css">
+
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/css/responsive.css">
+
+      <!-- Google Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+          <span class="tagline">Fatih Karagöz</span>
+        </div>
+        <div class="posts">
+          <ul class="posts-list">
+            
+              <li class="post-link">
+                <a class="post-title" href="/posts/2017/02/20/ab-2017.html">
+                  <span class="post-date">20 Feb 2017</span>
+                  Akademik Bilişim 2017 - Siber saldırı ve savunma atölyesi
+                </a>
+              </li>
+            
+              <li class="post-link">
+                <a class="post-title" href="/posts/2017/02/20/Lyk.html">
+                  <span class="post-date">20 Feb 2017</span>
+                  Linux Yaz Kampı 2016 - Ağ Güvenliği Ve Sızma  Testleri
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="footer">
+          <span id="footer-links">
+            <a href="" class="footer-link">About</a> <span class="separator">&bull;</span>
+            <a href="" class="footer-link">Twitter</a> <span class="separator">&bull;</span>
+            <a href="https://github.com/FatihKaragoz" class="footer-link">GitHub</a>
+          </span>
+        </div>
+      </div>
+
+        <div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="/images/lyk16.jpg">
+    </div>
+    <div id="info-container">
+      <h1 id="title">Linux Yaz Kampı 2016 - Ağ Güvenliği Ve Sızma  Testleri</h1>
+      <span id="date">20 Feb 2017</span>
+    </div>
+  </div>
+
+  <div class="post">
+    <h2>Linux Yaz Kampı 2016 - Ağ Güvenliği ve Sızma Testleri</h2>
+
+<h2>Kurs Notlarım</h2>
+
+<p>Loaciton tespiti</p>
+
+<p>Alt domainlarin tespiti</p>
+
+<h2>-whois.domaintool.com</h2>
+
+<p>shodan.io
+Yeni bir  site hosta sürdüğümüzde bunlar üzerimizdeki bilgileri kendi cachelerine alıyorlar ve daha sonra başka sitler hakkında biz bilgi toplmaa yapmak istediğimizde burdan yararlanabiliriz.
+Shodan.io yu araştır</p>
+
+<p>FOCA ile meta-data analizi yap.
+Gerekli olan şeylerden hedef ve yol belirlemeye çalış.</p>
+
+<p>Googleda özelleştirilmiş araştırmalar yapmak için filtrelemeler.</p>
+
+<p>Herhangi bir domaindeki login ekranarının tespiti aşamasıdna google searchü
+inurl:login site:.*ankara.edu.tr </p>
+
+<p>Hedef domainlere benzer domainlerin tespiti</p>
+
+<p>url crazy ye örneğin urlcrazy -p ankara.edu.tr</p>
+
+<p>alexa.com bir amazon şirketi
+örneğin ankara.edu.tr ile ilişkisi olan siteler 
+ankara.edu.tr den en çok yapılan aramalar vs. gibi bilgileri</p>
+
+<p>NMAP ile aktif bilgi toplama...</p>
+
+<p>netdiscover -i eth0 </p>
+
+<p>nmap ile ağdaki makinaların mac adreslerini toplama</p>
+
+<p>nmap 10.0.2.5/24
+nmap -iL parametresi ile hedeflerin yazılı olduğu bir wordlist varsa onları tarar</p>
+
+<p>-v ile canlı olarak o anki değerleri görürüz 
+nampa -sP 10.0.2.5/24 -v 
+-vv ile ise sadece bulduklarını gösterir.</p>
+
+<p>down olan cihazlara direk host down der. up durumda ise gösterir.</p>
+
+<p>hedefi belirledikten sonra düz nmpa taraması</p>
+
+<p>nmap 10.0.2.7  (düz taramda 100 portu tarıyor)
+cat /etc/services ile </p>
+
+<p>nmap 10.0.2.7 --top-port 500 (en çok kullanılan 500 portta tarama yapar).</p>
+
+<p>nmap -sS -sV 10.0.2.7   Syn paketi gönderir.(Hedef ile iletişime geçerken (3 way handshake))</p>
+
+<p>nmap -sT  (Syn proxy)  -Tarama atıyoruz sonuc dönüyo 100 porttan 100 ü de açık görünüyor o yüzden syn paketleri gönderdiğimde tüm portlar açık dönecektir bunu aşabilmek için</p>
+
+<p>nmap -sT -sV -p80,8000 10.0.2.7   (80. port ile 8000 arasını tarar).</p>
+
+<p>nmap -sT -sV -p 10.0.2.7 tüm portları tara</p>
+
+<p>nmap -sT -sV 10.0.2.7 -O -vv işletim sistemi tahmini</p>
+
+<p>nmap -sT -sV 10.0.2.7  -vv -T hız ayarlama</p>
+
+<p>nmap -sT -sV 10.0.2.7</p>
+
+<p>nmap -f 
+f parametresi ile gönderdiğimiz paketleri görüyoruz 
+-f --f-f -f -f gibi parça sayısı kadar -f koyarak parça sayısını ayarlayabilriiz.</p>
+
+<p>nmap -D iplist.txtcd </p>
+
+<p>karşı tarafta bir firewall var tarama yapamadık o zamna :</p>
+
+<p>nmap --spoof-mac=IBM diyerek spoof bir mac adresiyle firewall u atlatabiliyoruz.</p>
+
+<p>nmap -D RND:5 10.0.2.7 -vv</p>
+
+<p>-D ile ip üret RND:5 ile 5 ip üret 10.0.2.7 ağında</p>
+
+<p>nmap in kendi bünyesindeki scriptler (NSE)
+ls /usr/share/nmap/scripts/ içinde bulunur.</p>
+
+<p>nmap -sT -sV -p 25 -sC ftp-vsftpd-backdoor.nse 10.0.2.7</p>
+
+<p>Tor ile bir mesh in içine girip ip değiştirir çıkışta en son vekilin ip sini alır.</p>
+
+<p>Tor-nmap arası için geçiş noktalarım</p>
+
+<p>-tor
+-proxchains
+-nmap </p>
+
+<p>proxychains firefox  ile 
+firefox un proxy ayarlarında port 9050 ye
+sonra ip kontrolü yap</p>
+
+<p>unicornscan ile tarama</p>
+
+<p>root@fkaragoz:~# unicornscan 10.0.2.7
+root@fkaragoz:~# unicornscan -V 10.0.2.7  -V ile 
+root@fkaragoz:~# unicornscan 10.0.2.7:1-500 port 1 ile 500 arasında</p>
+
+<p>TEKRAR</p>
+
+<hr>
+
+<p>nmap -sT -sV -p- --system-dns 10.0.2.7    (-p- ile tüm portları tara)</p>
+
+<p>Güvenlik duvarı için fregmantation</p>
+
+<p>-f -f -f gibi..</p>
+
+<p>Bir diğer atlatma yöntemi </p>
+
+<p>--spoof-mac=IBM</p>
+
+<p>Diğeri 
+-D 192.168.1.14,192.168.1.15,........ gibi bir liste oluşurma</p>
+
+<p>RND:5 ---&gt;  5 tane ip oluşturup arasına bizi yerleştirir.</p>
+
+<p>İşletim sistemi testi için -O (En az 1 açık ve 1 kapalı porta  ihtiyacı var)</p>
+
+<p>Scriptler</p>
+
+<p>/etc/share/nmap/scripts altında bulunur.</p>
+
+<p>nmap --script=.....nse 10.0.2.7
+nmap  --script=all 10.0.2.7 dersek tüm scriptleri kullanır. tüm listedeki scriptleri dener.</p>
+
+<p>NMAP raporları</p>
+
+<p>nmap stateleri open, closed , open | filtered (açık fakat filtreli)</p>
+
+<p>nmap 10.0.2.4 </p>
+
+<p>nmap -sT -sV -p- --script=all 10.0.2.7 -oA kevgir &amp; </p>
+
+<p>-oA ile raporlama kevgir diye kaydet ve &amp; ile arka planda yap</p>
+
+<p>-sU UDP taraması
+-sX </p>
+
+<p>TOR Tekrar</p>
+
+<p>-proxychains 
+-tor 
+-nmap</p>
+
+<p>proxychains nmap proxychains firefox</p>
+
+<p>PASİF BİLGİ TOPLAMA DEVAM</p>
+
+<h2>Dns </h2>
+
+<p>Bruteforce ile soru cevap şeklinde dnsten bilgi alma işlemi yapılabilir.
+Recursive sergu ( Biliyorsa cevap veriri bilmiyorsa gidip getirir.)
+Non-Recursive sorgu ile daha önce bu dns&#39;ten buraya girilmiş mi ?
+Bu bize kurumdaki trafiği sağlar.</p>
+
+<p>nslookup -type=NS konya.edu.tr  --&gt;DNS sunucuları
+dig konya.edu.tr  --&gt;DNS sunucuları</p>
+
+<p>SOA sunucuları 
+nslookup -type=SOA konya.edu.tr</p>
+
+<p>Bruteforce</p>
+
+<p>--Fierce ile devam ediyoruz.
+fierce -dns konya.edu.tr -wordlist yazdigimizliste.txt</p>
+
+<p>Zone transfer</p>
+
+<p>dig öncelikle sistemde tanımlı olan dns sunucusuna gider.
+Zone transfer yaparken hangi dns sunucusuna gideceğimizi belirlemek</p>
+
+<p>İlk önce  dig ns konya.edu.tr ile sorumlu olan ns sunuculaırnı bulalım
+sonra 
+dig axfr konya.edu.tr @ns1.konya.edu.tr</p>
+
+<p>Recursive ve non-recursive dns sorgularını yapmamızın nedeni : </p>
+
+<p>Kurum içinde daha önce o domaşnlere gidilip gidilmediğini bulma ve ağ profili çıkartmaktır.</p>
+
+<p>Dns kira süreleri önemli.</p>
+
+<p>non-recursive sorgu oluşturmak için rd=0 yaparız
+dig de +[no]recursive   ---&gt; NON-RECURSİVE
+bişey yazmazsak zaten recursive yapar.</p>
+
+<h2>MAİL</h2>
+
+<p>Araştır</p>
+
+<h2>NMAP TEKRAR</h2>
+
+<p>-sT --&gt; üçlü el sıkışmayı tamamlıyor.
+-sS --&gt; bağlantıyı sağlama aşamasında --&gt; Syn proxy varsa tüm portları açık yollar.
+ -v --&gt; varvose 10.0.0.0/16 networkünde tarama yaparken kullanmak lazım çok büyük bir netwrok olduğundan</p>
+
+<p>nmap -sT -sV -p8000-9000 10.0.2.7</p>
+
+<p>EK -----
+Decoy scan--&gt; sahte ip lerden paket üreterek kalabalık yap arada da kendin sız (Decoy = kalabalık yapmak)</p>
+
+<p>IDLE Scan --&gt; header paketinin içindeki id kısmına aslında random değer konulur fakat bazı network geliştiriciler bunun algoritmasını kendi kolaylığı ile yaptıkları için bu bir açıklık haline gelir.</p>
+
+<p>1- Network trafiği boşta olan bir makina lazım.
+2- Veya boşta kalmış bir makina 
+3- Bir arttırdığını fark ettiğimiz bir makina bulursak kendimizi araya girmek için güzel bir fırsat bulmuş oluyoruz 
+4- </p>
+
+<p>DNS TEKRAR</p>
+
+<p>A Kaydı</p>
+
+<p>NS Kaydı nameserverları getirir</p>
+
+<p>SOA kaydı doaminin tüm bilgilerini getirir. Konfigürsayon kayıtlarını getirir. Yetkili olan mail sunucusunda yetkili olan kişinin mail bilgisi gelir.
+o alan adından sorumlu master dns i buluruz.
+SOadan elde ettiğimiz bilgi büyük ihitimalle ana sunucuudur.</p>
+
+<p>PTR kayıtları :  ip yi hosta çevirir.
+Cname kaydı bir websitesi adr esi sorduğumuzda onun ip sini getirir
+Option kaydı : otorite sunucularını yetkilendirme amaçlı domain controller kim ? </p>
+
+<p>MX kaydı </p>
+
+<p>KOMPLE ip tablosnu engelleme</p>
+
+<p>iptable -t filter -A INPUT -J DROP</p>
+
+<p>tcpdump -i eth0 -nnv  arp ---&gt; tcpdump ile dinleme</p>
+
+<p>arp protookolü layer 2 dde koştuğundan dolayı %99 oranında kimse kural girmediği için arp protocolü yüksek oranda başarılı bilgi toplayabilir.</p>
+
+<p>nmap ile karşıdaki netwokün ayakta olduğunu bildiğimiz zaman -P parametresi ile arp paketi önderiği hostun ayakta olup olmadığına bakmaz ve direk port taramasına başlar.</p>
+
+<p>arp-scan -l -I eth0 </p>
+
+<p>-I parametresi network belirtir -l ile local i tarar.</p>
+
+<p>---------Network Saldırıları----------</p>
+
+<p>Katmanlarda neler yapılabiliyor?
+ARP Saldırısı (Aradaki adam Sadldırısı Man in the middle)</p>
+
+<p>Katmanlara zarar vermek.
+Hedef aldığımız sistemin trafiğinin kendimizde geçmesini sağlayabiliyoruz.</p>
+
+<p>Araya girip client ile server arasına kendimiz router olarak sokuyoruz ve gelen giden trafiği dinliyoruz.
+Direkt arp-reply yapabiliyoruz.</p>
+
+<p>Kalide çoğu tool direk arp-reply yapar.
+Soru soraraak yapmak istersek yine kendimize gateway in ip adresini verip cliente arp paketi yolllarız client bize cevap döndüğünde ise bizi gateway olarak görür ve trafik bizim üstümüze yönlenir.
+En son router ı açıyoruz ki işletim sistemi drop etmesin .
+Routerı açmazsak dos yapmış oluruz.</p>
+
+<h2>ÖRNEK </h2>
+
+<p>Sormadan direkt syn paketi yollmak.</p>
+
+<p>saldırgan makineden client ve servara cliente: ben server ım servera ise ben clientim diyoruz.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>server         client    (ben client&#39;ım reply&#39;i)
+</code></pre></div>
+<p>send(IP(dst=&quot;192.168.31.31&quot;, src=&quot;192.168.0.23&quot;)/ARP(hwsrc=&quot;saldırgan<em>mac&quot;,hwdst=&quot;gidecek</em>olan&quot;,op=1))</p>
+
+<p>op = 1 ikisinde de çalışıyor op=2 windowsta çalışmıyor.</p>
+
+<p>--------arpspoof-------
+arpspoof [-i interface] [-c own] |host|both] [] </p>
+
+<h2>Layer 3 saldırıları :</h2>
+
+<p>Spoofing için layer 4 (data) kısmı da olması gerekiyor.</p>
+
+<p>tcp&#39;de yapabileceğimiz ip sahteciliği zor olur (3way handshake) 
+udp de ise herhangi bir kontrol mekanizması olmadığından daha kolay yapılabilir.
+tcp De başarılı olmamızı sağlayan bir şey sequence numaralarının sıralı üretilmesidir.
+ama dönen cevap bize gelmeyeceği için işimize yaramaz sadece dos etmiş oluruz.</p>
+
+<p>Layer 4 saldırıları :</p>
+
+<p>nmapta state scan de syn paketi gönderdiği için tüm portlar açık gönderir. connect scan yapmamız lazım bu yüzden</p>
+
+<p>syn flood yaparken önce iptables -t filter -A OUTPUT tcp --tcp-flags RS </p>
+
+<p>nodprobe ip_contrack kernele eklemek lazım</p>
+
+<p>ICMP ile yapılabilecek bir diğer takla da şudur : </p>
+
+<p>saldırgan sanki kurbandan geliyormuş gibi icmp request mesajını broadcast olarak yollar tüm ağdaki cihazlar kurbana reply dönerse kurban üzerinde bir dos olabilir.</p>
+
+<p>ICMP Redirect ile man in the middle saldırısı : </p>
+
+<hr>
+
+<p>Host ve client arasında ki bağlantıda router eğer daha kapasiteli bir router varsa ona yönlendirir yönlendirirken geri döndürdüğü pakete aynı data yı yerleştirir---&gt; gönderilen ilk paketi yakalamamız lazım (kural : gönderilen paketin aynısını dataya ekle icmp paketi olarak geri gönder.)</p>
+
+<p>SNMP (Simple Network Management Protocol)
+ UDP protocolü ile birlikte 16 numaralı porttan çalışır.</p>
+
+<p>openvas --&gt; ile ayakta olan iplere ait açık portları üzerinde koşan işletiim sistemlerini bulabiliyoruzz.
+openvas --&gt; ile üzerinde koşna procsesslere kadar herşeyi bulbiliyoruz.(ücretsiz)</p>
+
+<p>nessus --&gt; açık kaynaklı başlayıp sonradan kapatılmış.html5 arayüzü var(ücretli)
+home sürümünde 512 ip tarayabiliyoruz ve sadece private ip taramay izin veriyor
+pro sürümünde sınır yok pubic ip de tarayabiliyoruz</p>
+
+<p>netstat lntop ile ayakta olan portlardan 8834 ile çalışıyor.</p>
+
+<p>birinci activity de ikinci için openFirst diye bir onClick tanımla(xml&#39;de). (.java) public void openFirst(View v){
+İntent intntdegiskeni=new intent (this,ucuncuact.class); ile açıyoruz.</p>
+
+<p>}</p>
+
+<p>Birinciden onClick olunca butona ikinci activity açılsın ikinciden de birinci açılsın</p>
+
+<hr>
+
+<p>Birinci activity de kullanıcı adı ve şifre al butona tıklanınca yine </p>
+
+<p>intent in putextra methodu ile intenti gönderiyoruz ikinci activitye ikinci açıldığında edittextlerdeki şifreve kullanıcı adını kontrol edip üçüncü activitye aktarıyoruz.Birinci act. alığımız verileri üçücü act. aktarırken intent intentdegikeni =getintent(); ile alıyoruz.verileride getStringEKstra ile okuyoruz.String alırken </p>
+
+<p>implicit -&gt; hangi uygulamada açılsın ? </p>
+
+<p>explicit -&gt; bi activityden diğerine geçmek için.</p>
+
+<p>bir buton koy bu buton aram olsun bu bputona basıldığı zaman hangi uygulama ile devam edilsin diye sormak içn
+---&gt; </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>public void (view v){
+    Uri = uri = Uri.parse(&quot;tel:532128945&quot;);
+    Intent intent = new Intent(Intent.ACTION?DIAL,uri);
+    startActivity(intent);
+}
+</code></pre></div>
+<p>Bu yaptığımız implicit intent !</p>
+
+<p>Direkt arama yapması için
+----&gt; </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>ACTION_DIAL yerine ACTION_CALL yazıyoruz. Bizden izin ister.Logcatten 
+</code></pre></div>
+<p>Mail gönderme arayüzü</p>
+
+<p>---&gt; xml dosyasında linear layout yap
+---&gt; Orientation -&gt; vertical
+---&gt; Edittext-&gt;kime
+---&gt; Edittext-&gt;konu
+---&gt; Edittext-&gt;MEsaj
+---&gt; Buton-&gt;Gönder
+---&gt; Edittextlerin layout<em>weight ini ayarla.
+---&gt; Mesaj edittextinin mesaj yazsıının en üstte olması için -&gt; android:gravity = &quot;top&quot; yap.
+---&gt; Gönder butonunu sağa çekmek için android:layout</em>gravity</p>
+
+  </div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on 20 Feb 2017</span> <span class="separator">&bull;</span>
+      <span id="social">Find me on <a href="">Twitter</a>!</span>
+    </p>
+  </div>
+</div>
+
+
+
+    </div>
+    <script src="/scripts/responsive.js" type="text/javascript"></script>
+  </body>
+</html>
