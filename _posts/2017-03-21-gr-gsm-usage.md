@@ -64,9 +64,9 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
 
 ## C0 GSM Sinyallerini görüntüleme :
   grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
-    ```
+    <br/>```
     grgsm_livemon
-    ```
+    ```<br/>
   yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
 
 ## GSM Sinyallerini yakalama ve bir  dosyaya kaydetme
