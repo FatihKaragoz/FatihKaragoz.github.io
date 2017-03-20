@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL-SDR GR-GSM USAGE
-cover: gr-gsm-usage.jpg
+cover: grgsmusage.png
 date:   2017-03-21 00:46:00
 categories: posts
 ---
