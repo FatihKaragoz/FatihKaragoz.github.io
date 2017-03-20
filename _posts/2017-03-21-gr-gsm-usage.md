@@ -11,23 +11,23 @@ categories: posts
 
 Öncelikle GSM sinyallerini dinleme ve analiz etmek için belli başlı toollara kullanacağımızı daha önceki yazılarımızda söylmiştik, şimdi bu toollardan biri olan GR-GSM toolunu ele alacağız.
 
- * [https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging bracnh'ı olması şartı ile paketimizi zip olarak indiriyoruz.
-
+ *[https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging bracnh'ı olması şartı ile paketimizi zip olarak indiriyoruz.
  Paketi indirdikten sonra sırasıyla uygulayacaımız adımlar :
-
   * Kurulum yapılacak olan dizini oluşturun
-
+      <br/>
+     ```  
       mdkir gr-gsm
       cd gr-gsm
       mv ~/Downloads/gr-gsm-packaging.zip ~/gr-gsm
+      ```
 
   * [https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation](https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation) projenin "Wiki"'sinden installation için gerekli adımlara bakıyoruz.
-
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip az önce oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
-
+    <br/>
+    ```  
     unzip gr-gsm-packaging.zip
     cd gr-gsm-packaging
     mkdir build
@@ -40,12 +40,16 @@ categories: posts
     mkdir .gnuradio   
     cd .gnuradio/
     nano config.conf
+    ```
+    <br/>  
   oluşturduğumuz bu config.conf dosyasının içine
+    <br/>
+    ```  
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
+    ```
+    <br/>  
   bu satırları ekleyip kaydediyoruz.
-
-
 
 Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
    [https://github.com/ptrkrysik/gr-gsm/wiki/Usage](https://github.com/ptrkrysik/gr-gsm/wiki/Usage) adresinden kullanım kitaçığına erişebilirsiniz.
@@ -62,31 +66,43 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
 
 ## C0 GSM Sinyallerini görüntüleme :
   grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
-
+    <br/>
+    ```  
     grgsm_livemon
-
-  yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.
-
-    Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
+    ```
+    <br/>  
+  yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
 
 ## GSM Sinyallerini yakalama ve bir  dosyaya kaydetme
   Bu program yakalanmış sinyaleri bir dosyaya kadetme genişliği sağlar. Hem raw data formatında hem de gr-gsm'in burst formatında kayıt imkanı sağlar.
+    <br/>
+    ```  
     grgsm_decode
-
+    ```
+    <br/>  
   Kaydetme hakkında daha ayrıntılı bilgi sağlamak için programı -h parametresi ile başlatalım.
-
+    <br/>
+    ```  
     grgsm_capture -h
-
+    ```
+    <br/>  
 ## Yakalanan GSM sinyallerini grgsm_decode ile çözmek
 
 grgsm_decode programı grgsm_capture ile kaydedilmiş GSM mesajları decode eder. Programı başlatmak için
+  <br/>
+  ```  
   grgsm_decode
+  ```  
+  <br/>
 
 Program he mcfile hemde brust türünde kaydedilmiş dosyaları destekler ve decode eder. A5 şifrelemeleri için, A5/1, A5/2 ve A5/3  decyrptionlar
 desteklenir. grgsm_decode, GSM-FR, GSM-EFR, AMR 12.2, AMR 10.2, AMR 7.95, AMR 7.4, AMR 6.7, AMR 5.9, AMR5.15,AMR 4.75 ses dosyalarının bileşenlerini içerir.
 Program hakkında daha detaylı bilgi için
+  <br/>
+  ```  
   grgsm_decoder -h
-
+  ```  
+  <br/>
 parametresini kullanablirsiniz.
 
 Daha detaylı bilgi için [buraya tıklayın](https://github.com/ptrkrysik/gr-gsm/wiki/Usage:-Decoding-How-To)
@@ -97,17 +113,25 @@ Daha detaylı bilgi için [buraya tıklayın](https://github.com/ptrkrysik/gr-gs
 Gr-gsm uygulaması GSMTAP formatında UDP 4729 portuna GSM mesajı gönderebilir. Wireshark bu porta gelen istekleri GSMTAP formatında yorumlar.
 
 Debian tabanlı sistemlerde Wireshark aşağıdaki komutla kurulabilir.
-
+  <br/>
+  ```bash  
   sudo apt-get install wireshark
-
+  ```  
+  <br/>
 Wireshark'ı başlatmak ve grgsm_decode'dan elde edilmiş GSMTAP packetlerini analiz etmek için aşağıdaki komut verilebilir.
-
+  <br/>
+  ```  
   sudo wireshark -k -f udp -Y gsmtap -i lo
+  ```  
+  <br/>
 
 ## Kanallar arası geçiş yapmak
 
 GSM sinyalleri bölünmüş sinyallerdir ve bu sinyallerde işimize yarayanı bulmak için bazı işlemler yaparız.
 
 Örneğin aşağıdaki komut my_wideband_capture.cfile adındaki kaydedilmiş 925.2 MHz merkezli (ARFCN 975) dosyadan , her 1 Msps'de  12 tane sonuç dosyası çıkarır ARFCNs 975-1023.
-
+  <br/>
+  ```  
   grgsm_channelize.py -s 20e6 -c my_wideband_capture.cfile -f 925.2e6 990 991 992 993 994 995 1019 1020 1021 1022 1023
+  ```  
+  <br/>
