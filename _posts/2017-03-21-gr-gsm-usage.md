@@ -14,17 +14,16 @@ categories: posts
  * [https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging bracnh'ı olması şartı ile paketimizi zip olarak indiriyoruz.
 
  Paketi indirdikten sonra sırasıyla uygulayacaımız adımlar :
-
   * Kurulum yapılacak olan dizini oluşturun
-
       mdkir gr-gsm
       cd gr-gsm
       mv ~/Downloads/gr-gsm-packaging.zip ~/gr-gsm
-
   * [https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation](https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation) projenin "Wiki"'sinden installation için gerekli adımlara bakıyoruz.
 
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
+
+      sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev osmo-sdr libosmosdr-dev libosmocore libosmocore-dev cmake libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip az önce oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
 
@@ -40,6 +39,7 @@ categories: posts
     mkdir .gnuradio   
     cd .gnuradio/
     nano config.conf
+
   oluşturduğumuz bu config.conf dosyasının içine
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
@@ -65,9 +65,7 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
 
     grgsm_livemon
 
-  yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.
-
-    Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
+  yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
 
 ## GSM Sinyallerini yakalama ve bir  dosyaya kaydetme
   Bu program yakalanmış sinyaleri bir dosyaya kadetme genişliği sağlar. Hem raw data formatında hem de gr-gsm'in burst formatında kayıt imkanı sağlar.
@@ -80,11 +78,13 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
 ## Yakalanan GSM sinyallerini grgsm_decode ile çözmek
 
 grgsm_decode programı grgsm_capture ile kaydedilmiş GSM mesajları decode eder. Programı başlatmak için
+
   grgsm_decode
 
 Program he mcfile hemde brust türünde kaydedilmiş dosyaları destekler ve decode eder. A5 şifrelemeleri için, A5/1, A5/2 ve A5/3  decyrptionlar
 desteklenir. grgsm_decode, GSM-FR, GSM-EFR, AMR 12.2, AMR 10.2, AMR 7.95, AMR 7.4, AMR 6.7, AMR 5.9, AMR5.15,AMR 4.75 ses dosyalarının bileşenlerini içerir.
 Program hakkında daha detaylı bilgi için
+
   grgsm_decoder -h
 
 parametresini kullanablirsiniz.
