@@ -25,7 +25,7 @@ categories: posts
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
-    sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev cmake osmo-sdr libosmosdr-dev libosmocore libosmocore-dev libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy
+      sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev cmake osmo-sdr libosmosdr-dev libosmocore libosmocore-dev libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
 <br/>
