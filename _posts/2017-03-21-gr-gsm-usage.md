@@ -81,9 +81,9 @@ Aşağıdaki programlar yardımcı scriptler konumundadır :<br/>
     <br/>  
   Kaydetme hakkında daha ayrıntılı bilgi sağlamak için programı -h parametresi ile başlatalım.
     <br/>
-    ```  
+    <pre><code>
     grgsm_capture -h
-    ```
+    </code></pre>
     <br/>  
 ## Yakalanan GSM sinyallerini grgsm_decode ile çözmek
   grgsm_decode programı grgsm_capture ile kaydedilmiş GSM mesajları decode eder. Programı başlatmak için
