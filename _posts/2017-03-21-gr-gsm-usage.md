@@ -29,8 +29,7 @@ categories: posts
   ```
   <br/>
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
-  <br/>
-  ```
+  <pre><code>
   unzip gr-gsm-packaging.zip
   cd gr-gsm-packaging
   mkdir build
@@ -43,8 +42,7 @@ categories: posts
   mkdir .gnuradio   
   cd .gnuradio/
   nano config.conf
-  ```
-  <br/>
+  </code></pre>
   * Son kod ile oluşturduğumuz bu config.conf dosyasının içine :
   <br/>
   ```
@@ -80,11 +78,9 @@ Aşağıdaki programlar yardımcı scriptler konumundadır :<br/>
     ```
     <br/>  
   Kaydetme hakkında daha ayrıntılı bilgi sağlamak için programı -h parametresi ile başlatalım.
-    <br/>
     <pre><code>
     grgsm_capture -h
     </code></pre>
-    <br/>  
 ## Yakalanan GSM sinyallerini grgsm_decode ile çözmek
   grgsm_decode programı grgsm_capture ile kaydedilmiş GSM mesajları decode eder. Programı başlatmak için
   <br/>
