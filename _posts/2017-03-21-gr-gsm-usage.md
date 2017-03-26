@@ -27,20 +27,20 @@ categories: posts
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
   <br/>
-    ```bash
-    unzip gr-gsm-packaging.zip
-    cd gr-gsm-packaging
-    mkdir build
-    cd build
-    cmake ..
-    make
-    make install
-    ldconfig
-    cd
-    mkdir .gnuradio   
-    cd .gnuradio/
-    nano config.conf
-    ```
+      ```bash
+      unzip gr-gsm-packaging.zip
+      cd gr-gsm-packaging
+      mkdir build
+      cd build
+      cmake ..
+      make
+      make install
+      ldconfig
+      cd
+      mkdir .gnuradio   
+      cd .gnuradio/
+      nano config.conf
+      ```
     <br/>
   oluşturduğumuz bu config.conf dosyasının içine <br/>
     [grc]
