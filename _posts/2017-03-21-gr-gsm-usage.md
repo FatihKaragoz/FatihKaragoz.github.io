@@ -26,8 +26,6 @@ categories: posts
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
-    <br/>
-    ```  
     unzip gr-gsm-packaging.zip
     cd gr-gsm-packaging
     mkdir build
@@ -40,15 +38,9 @@ categories: posts
     mkdir .gnuradio   
     cd .gnuradio/
     nano config.conf
-    ```
-    <br/>  
   oluşturduğumuz bu config.conf dosyasının içine
-    <br/>
-    ```  
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
-    <br/>  
-    ```
   bu satırları ekleyip kaydediyoruz.
 
 Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
@@ -65,10 +57,8 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
    * grgsm_channelize : eski adıyla grgsm_channelize.py ,Genişband olarak yayılan GSM sinyallerini ayırır.
 
 ## C0 GSM Sinyallerini görüntüleme :
-    <br/>
-    ```  
+    <br/>  
     grgsm_livemon
-    ```
     <br/>  
   yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
   grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
