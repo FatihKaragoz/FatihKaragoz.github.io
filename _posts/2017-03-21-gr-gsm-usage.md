@@ -26,7 +26,8 @@ categories: posts
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
-    
+  <br/>
+    ```bash
     unzip gr-gsm-packaging.zip
     cd gr-gsm-packaging
     mkdir build
@@ -39,8 +40,9 @@ categories: posts
     mkdir .gnuradio   
     cd .gnuradio/
     nano config.conf
-
-  oluşturduğumuz bu config.conf dosyasının içine
+    ```
+    <br/>
+  oluşturduğumuz bu config.conf dosyasının içine <br/>
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
   bu satırları ekleyip kaydediyoruz.
@@ -49,19 +51,17 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
    [https://github.com/ptrkrysik/gr-gsm/wiki/Usage](https://github.com/ptrkrysik/gr-gsm/wiki/Usage) adresinden kullanım kitaçığına erişebilirsiniz.
 
 
-   Aşağıdaki uygulamalar gr-gsm tabanlıdır:
-   * grgsm_decode : eski adıyla airprobe_decode.py , C0 kanalların decode edilmesi içindir.
-   * grgsm_livemon: eski adıyla airprobe_rtlsdr.py , Wireshark ile bir C0 kanalının analiz edilmesi ve interaktif olarak izlenmesi için kullanılır.
-   * grgsm_scanner : eski adıyla airprobe_rtlsdr_scanner.py , Bu program ise GSM bandlarını tarayarak ekrana informationları getirir.
+Aşağıdaki uygulamalar gr-gsm tabanlıdır:
+  * grgsm_decode : eski adıyla airprobe_decode.py , C0 kanalların decode edilmesi içindir.
+  * grgsm_livemon: eski adıyla airprobe_rtlsdr.py , Wireshark ile bir C0 kanalının analiz edilmesi ve interaktif olarak izlenmesi için kullanılır.
+  * grgsm_scanner : eski adıyla airprobe_rtlsdr_scanner.py , Bu program ise GSM bandlarını tarayarak ekrana informationları getirir.
 
-   Aşağıdaki programlar yardımcı scriptler konumundadır :
-   * grgsm_capture : eksi adıyla airprobe_rtlsdr_capture.py , GSM sinyallerini yakalra ve grgsm_decode'un anlayabileceği bir forma getirir
-   * grgsm_channelize : eski adıyla grgsm_channelize.py ,Genişband olarak yayılan GSM sinyallerini ayırır.
+Aşağıdaki programlar yardımcı scriptler konumundadır :
+  * grgsm_capture : eksi adıyla airprobe_rtlsdr_capture.py , GSM sinyallerini yakalra ve grgsm_decode'un anlayabileceği bir forma getirir
+  * grgsm_channelize : eski adıyla grgsm_channelize.py ,Genişband olarak yayılan GSM sinyallerini ayırır.
 
-## C0 GSM Sinyallerini görüntüleme :
-    <br/>  
+## C0 GSM Sinyallerini görüntüleme :  
     grgsm_livemon
-    <br/>  
   yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
   grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
 
