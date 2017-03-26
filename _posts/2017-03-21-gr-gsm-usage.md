@@ -24,9 +24,9 @@ categories: posts
   * [https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation](https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation) projenin "Wiki"'sinden installation için gerekli adımları uyguluyoruz.
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :<br/>
-  ```
+  <code>
   sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev cmake osmo-sdr libosmosdr-dev libosmocore libosmocore-dev libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy
-  ```
+  </code>
   <br/>
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
   <pre><code>
@@ -39,17 +39,15 @@ categories: posts
   make install
   ldconfig
   cd
-  mkdir .gnuradio   
+  mkdir .gnuradio  
   cd .gnuradio/
   nano config.conf
   </code></pre>
   * Son kod ile oluşturduğumuz bu config.conf dosyasının içine :
-  <br/>
-  ```
+    <code>
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
-  ```
-  <br/>
+    </code>
   bu satırları ekleyip kaydediyoruz.
 
 Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
