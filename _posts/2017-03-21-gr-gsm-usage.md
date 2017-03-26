@@ -11,8 +11,8 @@ categories: posts
 
 Öncelikle GSM sinyallerini dinleme ve analiz etmek için belli başlı toollara kullanacağımızı daha önceki yazılarımızda söylmiştik, şimdi bu toollardan biri olan GR-GSM toolunu ele alacağız.
 
- *[https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging branch'ı olması şartı ile paketimizi .zip uzantısıyla indiriyoruz.<br/>
- Paketi indirdikten sonra sırasıyla uygulayacaımız adımlar :
+  * [https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging branch'ı olması şartı ile paketimizi .zip uzantısıyla indiriyoruz.<br/>
+ Paketi indirdikten sonra sırasıyla uygulayacağımız adımlar :
   * Kurulum yapılacak olan dizini oluşturun
       <br/>
      ```  
@@ -21,7 +21,7 @@ categories: posts
       mv ~/Downloads/gr-gsm-packaging.zip ~/gr-gsm
       ```
 
-  * [https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation](https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation) projenin "Wiki"'sinden installation için gerekli adımlara bakıyoruz.
+  * [https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation](https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation) projenin "Wiki"'sinden installation için gerekli adımları uyguluyoruz.
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 ```
