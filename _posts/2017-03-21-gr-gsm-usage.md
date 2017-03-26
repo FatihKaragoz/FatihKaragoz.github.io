@@ -57,12 +57,13 @@ categories: posts
 Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
    [https://github.com/ptrkrysik/gr-gsm/wiki/Usage](https://github.com/ptrkrysik/gr-gsm/wiki/Usage) adresinden kullanım kitaçığına erişebilirsiniz.
 
-Aşağıdaki uygulamalar gr-gsm tabanlıdır:<br/>
+Aşağıdaki uygulamalar gr-gsm tabanlıdır:
+
   * grgsm_decode : eski adıyla airprobe_decode.py , C0 kanalların decode edilmesi içindir.<br/>
   * grgsm_livemon : eski adıyla airprobe_rtlsdr.py , Wireshark ile bir C0 kanalının analiz edilmesi ve interaktif olarak izlenmesi için kullanılır.<br/>
   * grgsm_scanner : eski adıyla airprobe_rtlsdr_scanner.py , Bu program ise GSM bandlarını tarayarak ekrana informationları getirir.<br/>
-
 Aşağıdaki programlar yardımcı scriptler konumundadır :<br/>
+
   * grgsm_capture : eksi adıyla airprobe_rtlsdr_capture.py , GSM sinyallerini yakalra ve grgsm_decode'un anlayabileceği bir forma getirir.<br/>
   * grgsm_channelize : eski adıyla grgsm_channelize.py ,Genişband olarak yayılan GSM sinyallerini ayırır.<br/>
 
