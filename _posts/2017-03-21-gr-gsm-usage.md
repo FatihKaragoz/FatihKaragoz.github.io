@@ -26,6 +26,7 @@ categories: posts
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
   * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
+    
     unzip gr-gsm-packaging.zip
     cd gr-gsm-packaging
     mkdir build
@@ -38,6 +39,7 @@ categories: posts
     mkdir .gnuradio   
     cd .gnuradio/
     nano config.conf
+
   oluşturduğumuz bu config.conf dosyasının içine
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
