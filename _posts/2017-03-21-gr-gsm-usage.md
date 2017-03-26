@@ -11,7 +11,7 @@ categories: posts
 
 Öncelikle GSM sinyallerini dinleme ve analiz etmek için belli başlı toollara kullanacağımızı daha önceki yazılarımızda söylmiştik, şimdi bu toollardan biri olan GR-GSM toolunu ele alacağız.
 
- *[https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging bracnh'ı olması şartı ile paketimizi zip olarak indiriyoruz.
+ *[https://github.com/ptrkrysik/gr-gsm/tree/packaging](https://github.com/ptrkrysik/gr-gsm/tree/packaging) adresinden packaging branch'ı olması şartı ile paketimizi .zip uzantısıyla indiriyoruz.<br/>
  Paketi indirdikten sonra sırasıyla uygulayacaımız adımlar :
   * Kurulum yapılacak olan dizini oluşturun
       <br/>
@@ -25,7 +25,7 @@ categories: posts
   * Eğer Kali, Ubuntu gibi debian temelli bir linux kullanıcısıysanız yapmanız gerekenler şunlar :
   * Wiki'den alınmış ve kurulması gereken programları kuruyoruz :
 
-  * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip az önce oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
+  * Sonraki aşamada normalde git clone diyerek git'ten dosyaları çekmemiz gerekiyor fakat Wikinin bize verdiği bu link master brach olduğundan ve bizim packaging branch üzerinde çalıştığımızdan dolayı o aşamayı es geçip kaldı ki bu dosyanın packaging branch'ını az önce .zip olarak indirmiştik, oluşturduğumuz dizine indirdiğimiz zip dosyasını çıkarıyoruz.
     <br/>
     ```  
     unzip gr-gsm-packaging.zip
@@ -47,8 +47,8 @@ categories: posts
     ```  
     [grc]
     local_blocks_path=/usr/local/share/gnuradio/grc/blocks
-    ```
     <br/>  
+    ```
   bu satırları ekleyip kaydediyoruz.
 
 Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
@@ -65,13 +65,13 @@ Kurulumu başarıyla tamamladıktan sonra kullanımına gelelim :
    * grgsm_channelize : eski adıyla grgsm_channelize.py ,Genişband olarak yayılan GSM sinyallerini ayırır.
 
 ## C0 GSM Sinyallerini görüntüleme :
-  grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
     <br/>
     ```  
     grgsm_livemon
     ```
     <br/>  
   yazıyoruz.Programın bu penceresi spektrumların genliği ve real-time'da işlenen sinyaller hakkında bize bilg verir.Merkezi frekans hareketli kaydırıcı tarafından değiştirilebilir. GSM sinyalleri 200kHz bant genişliğine sahiptir. Fc slider'ı (kaydırıcı çubuk, buton) broadcast channel'ın taşıyıcı frekansa ayarladıktan sonra program hemen bir içerik ekrana basacaktır.Eğer bu işe yaramadıysa ppm slider'ı farklı bir pozisyona getirin.
+  grgsm_livemon gerçek zamanlı olarak C0 GSM sinyallerini decode eder. C0 kanalı kullanıcıların datasını,bütün şebekelerin bilgisini, konfigürasyonunu taşır. Bu program tıpkı gönderilen sinyalin kaynağı (kaynak cihaz,telefon) gibi ucuz RTL-SDR alıcısını kullanır. grgsm_livemon'u çalıştırmakk için konsola:
 
 ## GSM Sinyallerini yakalama ve bir  dosyaya kaydetme
   Bu program yakalanmış sinyaleri bir dosyaya kadetme genişliği sağlar. Hem raw data formatında hem de gr-gsm'in burst formatında kayıt imkanı sağlar.
