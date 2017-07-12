@@ -11,4 +11,4 @@ categories: posts
 ## RTL-SDR Teknolojileri ile GSM Sinyal Analizi
 
 
-![Model View Controller](_posts/rtl-sdrmakale.pdf)
+![Model View Controller](posts/rtl-sdrmakale.pdf)
