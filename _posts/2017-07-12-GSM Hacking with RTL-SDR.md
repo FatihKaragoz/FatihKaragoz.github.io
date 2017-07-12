@@ -10,5 +10,5 @@ categories: posts
 
 ## RTL-SDR Teknolojileri ile GSM Sinyal Analizi
 
-[embed]http://fatihkaragoz.me/rtl-sdrmakale.pdf[/embed]	
+
 ![Model View Controller](_posts/rtl-sdrmakale.pdf)
