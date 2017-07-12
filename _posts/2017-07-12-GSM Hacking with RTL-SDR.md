@@ -12,3 +12,4 @@ categories: posts
 
 
 ![Model View Controller](posts/rtl-sdrmakale.pdf)
+[[Gollum|rtl-sdrmakale.pdf]]
