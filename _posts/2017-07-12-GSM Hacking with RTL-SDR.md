@@ -281,8 +281,7 @@ aracıdır. Linux üzerinde bazı bağımlılıklar içerir. Bu bağımlıklar L
 kütüphanelerine bazı RTL-SDR kütüphaneleri eklemenizi ve kurmanızı
 ister.
 
-<img src="image5.png" width="165" height="165" />
-
+<img src="image5.png" width="165" height="165" /><br>
 Şekil 4.1.1.A : GR-GSM RTL-SDR Tool
 
 **4.1.1.1 RTL2832U aracımızı kalibre etmek**
