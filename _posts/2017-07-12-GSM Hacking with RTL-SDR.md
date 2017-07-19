@@ -80,7 +80,7 @@ artırılmaktadır. Günümüzde baz istasyonlarında tevcih denilen bir sistem
 kullanılmaktadır ki bu da farklı yönlere doğru farklı güçlerde sinyaller
 yayarak çift yönlü iletişim sağlamaktadır.
 
-<img src="/images/image2.png" width="278" height="278">
+<img src="/images/image2.jpeg" width="278" height="278">
 Şekil 1.1.A : Bölünmüş hücresel yapı
 
 **1.2 Kullanılan frekans aralıkları**
@@ -117,7 +117,8 @@ Downlink : Baz istasyonundan mobil cihaza doğru olan trafiktir.
 
 4.  Operating and Support Subsystem
 
-![image](/images/image2.gif "Title" {width=278px height=197px})
+
+<img src="image3.gif" width="278" height="197" /> 
 Şekil 2.A : GSM Ağ Mimarisi
 
 **2.1 Mobile Station** : Mobil istasyon mobil bir cihazdır. Teorik
@@ -253,7 +254,7 @@ cihazlar söylenildiği gibi piyasada 5$ ile 20$ arasında meblalara daha
 çok yurtdışından (çin, malezya) getirtilebilir. Farklı frekans
 aralıklarında bulunabilir ve ihtiyaca göre seçilmelidir.
 
-<img src="/images/image3.png" width="278" height="278">
+<img src="/images/image4.jpeg" width="278" height="278">
 Şekil 3.1.A : Çalışmada kullanılan Elonics E400 ya da altyapısında kullandığı teknoloji ile RTL2832U
 
 Elonics E400 55 MHz ile 2300 MHz arasında çalışabilme özelliğine sahip
@@ -278,7 +279,7 @@ aracıdır. Linux üzerinde bazı bağımlılıklar içerir. Bu bağımlıklar L
 kütüphanelerine bazı RTL-SDR kütüphaneleri eklemenizi ve kurmanızı
 ister.
 
-<img src="/images/image4.png" width="165" height="165">
+<img src="/images/image5.png" width="165" height="165">
 Şekil 4.1.1.A : GR-GSM RTL-SDR Tool
 
 **4.1.1.1 RTL2832U aracımızı kalibre etmek**
