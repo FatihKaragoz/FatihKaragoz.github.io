@@ -6,7 +6,7 @@ output: pdf_document
 date:   2017-07-11 23:34:00
 categories: posts
 ---
-<div style="text-align:center"><br /><img src="/images/image1.png" width="760" height="350" /><br />
+<div style="text-align:center"><br /><img src="/images/image1.png" width="760" height="350" /><br /></div>
 **RTL-SDR Tabanlı Teknolojiler ile GSM Sinyal Analizi**
 <sup>1</sup> Fatih KARAGÖZ
 
@@ -82,6 +82,7 @@ yayarak çift yönlü iletişim sağlamaktadır.
 
 <br /><img src="/images/image2.jpeg" width="278" height="278" /><br />
 Şekil 1.1.A : Bölünmüş hücresel yapı
+</div>
 
 **1.2 Kullanılan frekans aralıkları**
 
@@ -120,6 +121,7 @@ Downlink : Baz istasyonundan mobil cihaza doğru olan trafiktir.
 
 <br /><img src="/images/image3.png" width="278" height="197" /><br />
 Şekil 2.A : GSM Ağ Mimarisi
+</div>
 
 **2.1 Mobile Station** : Mobil istasyon mobil bir cihazdır. Teorik
 olarak tam çift yönlü iletişim mimarisine göre hem istemci hem snucudur.
@@ -256,6 +258,7 @@ aralıklarında bulunabilir ve ihtiyaca göre seçilmelidir.
 
 <br /><img src="/images/image4.jpeg" width="278" height="278" /><br />
 Şekil 3.1.A : Çalışmada kullanılan Elonics E400 ya da altyapısında kullandığı teknoloji ile RTL2832U
+</div>
 
 Elonics E400 55 MHz ile 2300 MHz arasında çalışabilme özelliğine sahip
 olup hemn hemn bütün RTL-SDR araçlarıyla çalışabilme özellliğine
@@ -281,6 +284,7 @@ ister.
 
 <br /><img src="/images/image5.png" width="165" height="165" /><br />
 Şekil 4.1.1.A : GR-GSM RTL-SDR Tool
+</div>
 
 **4.1.1.1 RTL2832U aracımızı kalibre etmek**
 
@@ -299,6 +303,7 @@ yapılacağıdır.)
 
 <br /><img src="/images/image6.png" width="278" height="162" /><br />
 Şekil 4.1.1.1.A : Kal RTL-SDR kalibre aracı kullanımı
+</div>
 
 Kalibre edilme işi esnasında iki çeşir sonuç alınır. İlki kapalı veya
 herhangi bir açılmış bağlantı olmayan frekanslar bir diğeri ise bağlantı
@@ -306,12 +311,14 @@ açılmış frekanslardır. Bağlantı açılmamış frekanslar “failed” ola
 
 <br /><img src="/images/image7.png" width="278" height="20" /><br />
 Şekil 4.1.1.1.B : Bağlantı açılmamış veya boş frekansların ekran çıktısı.
+</div>
 
 Bağlantı açılmış frekansların ise bir kanal numarası bulunur ve bu kanal
 numarası evrensel standartlar gereği frekans ile bulunur.
 
 <br /><img src="/images/image8.png" width="278" height="45" /><br />
 Şekil 4.1.1.1.C : Bağlantı açılmış ve kanal numarasına sahip frekans çıktısı
+</div>
 
 Analaşılacağı üzere belli başlı frekans aralıkları dolu ve bu
 aralıklarda herhangi bir GSM bağlantısı olmuş olma olasılığı ve bir
@@ -336,6 +343,7 @@ açıyoruz.
 
 <br /><img src="/images/image9.png" width="278" height="38" /><br />
 Şekil 4.1.1.2.A : Wiresharkın açılması
+</div>
 
 Arkasından local olarak bilgisayarımıza taktığımız “*dongle*” ile
 çalışacağımız için “*lo”* yani “*loopback”*i seçiyoruz.
@@ -345,6 +353,7 @@ yakalayabiliriz.
 
 <br /><img src="/images/image10.png" width="278" height="48" /><br />
 Şekil 4.1.1.2.B : grgsm\_livemon.py scriptinin çalıştırılması
+</div>
 
 Gr-gsm Livemon programına bir frekans veriyoruz ki bu frekans “*kal*”
 programından aldığımız ve içersinde bir GSM bağlantısı olduğunu
@@ -355,6 +364,7 @@ paketlerimiz yakalanmaya başlıyor.
 
 <br /><img src="/images/image11.png" width="278" height="344" /><br />
 Şekil 4.1.1.2.C : Yakalanan paketlerin terminaldeki hexadecimal karşılıkları
+</div>
 
 Yakalanan paketleri Wireshark’ta görsel bir sıraya dökmek ve analizi
 kolaylaştırmak adına “*gsmtap*” filtresini verebiliriz.
@@ -362,6 +372,7 @@ kolaylaştırmak adına “*gsmtap*” filtresini verebiliriz.
 <br /><img src="/images/image12.png" width="278" height="198" /><br />
 
 Şekil 4.1.1.2.D : Yakalanan paketlerin Wireshark monitörleme ortamı görüntüsü
+</div>
 
 **5. Yakalanan sinyallerinin kod çözme işlemleri**
 
@@ -373,6 +384,7 @@ Burada artık alınan paketleri kayıt altın almamız gerekiyor bunun içinde
 
 <br /><img src="/images/image13.png" width="278" height="34" /><br />
 Şekil 5.A : Yakalanan paketlerin kayıt altına alınması
+</div>
 
 Kayıt altına almak için çeşitli paremetreler kullnaılmıştır kısaca “-f”
 parametresi kayıt altına alınacak frekansı göstermektedir. “-s”
@@ -387,6 +399,7 @@ uygulama sayesinde alınır ve “*grgsm\_decode.py”* programı çalıştırı
 <br /><img src="/images/image14.png" width="278" height="25" /><br />
 Şekil 5.B : grgsm\_decode.py scriptinin gerekli parametreler ile paketleri decode
 etmesi
+</div>
 
 TMSI değeri ile paketler arasında arama yapıp çıkan “*immediate
 assignment”* paketlerinin birinden timeslot değeri alınır.
@@ -400,6 +413,7 @@ olur ki “*grgsm\_decode.py”* bu algoritmayı çözebilir.
 
 <br /><img src="/images/image15.png" width="278" height="30" /><br />
 Şekil 5.C : Decode aşamasında TMSI Kc key’inin kullanılması.
+</div>
 
 Decode edilmiş paketler içerisinde tekardan TMSI değeriyle arama
 yapıldıktan sonra “*assignment command”* paketlerinin birinden
@@ -410,6 +424,7 @@ verilip çıktı dosyası .au.gsm uzantısıyla kayıt edilir.
 
 <br /><img src="/images/image16.png" width="278" height="19" /><br />
 Şekil 5.D : Paketlerden çıkartılan belirleyici bilgilerin tekar grgsm\_decode programına verilmesi
+</div>
 
 Kaydedilen dosyayı kaynakçada bağlantısı verilen dosyanın içinde gsm
 sinyallerine dair bir sinyal olup olmadığını bulan bu araç ile
@@ -418,6 +433,7 @@ aracından alınan dosya eklenerek gerekli parametreler ile verilir.
 
 <br /><img src="/images/image18.png" width="278" height="35" /><br />
 Şekil 5.E : Gerekli parametrelerle decode edilmiş ses dosyasının çıkarılması
+</div>
 
 
 **6.Sonuç**
@@ -458,4 +474,4 @@ wwwteknikpcdersleri.com
 
 \[7\] RTL-SDR Official Website www.rtl-sdr.com
 
-</div>
+
