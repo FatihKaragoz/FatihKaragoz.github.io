@@ -80,7 +80,7 @@ artırılmaktadır. Günümüzde baz istasyonlarında tevcih denilen bir sistem
 kullanılmaktadır ki bu da farklı yönlere doğru farklı güçlerde sinyaller
 yayarak çift yönlü iletişim sağlamaktadır.
 
-<br /><img src="/images/image2.jpeg" width="278" height="278" /><br />
+<div style="text-align:center"><br /><img src="/images/image2.jpeg" width="278" height="278" /><br />
 Şekil 1.1.A : Bölünmüş hücresel yapı
 </div>
 
@@ -119,7 +119,7 @@ Downlink : Baz istasyonundan mobil cihaza doğru olan trafiktir.
 4.  Operating and Support Subsystem
 
 
-<br /><img src="/images/image3.png" width="278" height="197" /><br />
+<div style="text-align:center"><br /><img src="/images/image3.png" width="278" height="197" /><br />
 Şekil 2.A : GSM Ağ Mimarisi
 </div>
 
@@ -256,7 +256,7 @@ cihazlar söylenildiği gibi piyasada 5$ ile 20$ arasında meblalara daha
 çok yurtdışından (çin, malezya) getirtilebilir. Farklı frekans
 aralıklarında bulunabilir ve ihtiyaca göre seçilmelidir.
 
-<br /><img src="/images/image4.jpeg" width="278" height="278" /><br />
+<div style="text-align:center"><br /><img src="/images/image4.jpeg" width="278" height="278" /><br />
 Şekil 3.1.A : Çalışmada kullanılan Elonics E400 ya da altyapısında kullandığı teknoloji ile RTL2832U
 </div>
 
@@ -282,7 +282,7 @@ aracıdır. Linux üzerinde bazı bağımlılıklar içerir. Bu bağımlıklar L
 kütüphanelerine bazı RTL-SDR kütüphaneleri eklemenizi ve kurmanızı
 ister.
 
-<br /><img src="/images/image5.png" width="165" height="165" /><br />
+<div style="text-align:center"><br /><img src="/images/image5.png" width="165" height="165" /><br />
 Şekil 4.1.1.A : GR-GSM RTL-SDR Tool
 </div>
 
@@ -301,7 +301,7 @@ Kal aracında kullanacağımız parametreler -s (kullanılan GSM frekans
 aralığı sisteminin adı) ve -g (gain yani kaç dbi aralığında tarama
 yapılacağıdır.)
 
-<br /><img src="/images/image6.png" width="278" height="162" /><br />
+<div style="text-align:center"><br /><img src="/images/image6.png" width="278" height="162" /><br />
 Şekil 4.1.1.1.A : Kal RTL-SDR kalibre aracı kullanımı
 </div>
 
@@ -309,14 +309,14 @@ Kalibre edilme işi esnasında iki çeşir sonuç alınır. İlki kapalı veya
 herhangi bir açılmış bağlantı olmayan frekanslar bir diğeri ise bağlantı
 açılmış frekanslardır. Bağlantı açılmamış frekanslar “failed” olarak
 
-<br /><img src="/images/image7.png" width="278" height="20" /><br />
+<div style="text-align:center"><br /><img src="/images/image7.png" width="278" height="20" /><br />
 Şekil 4.1.1.1.B : Bağlantı açılmamış veya boş frekansların ekran çıktısı.
 </div>
 
 Bağlantı açılmış frekansların ise bir kanal numarası bulunur ve bu kanal
 numarası evrensel standartlar gereği frekans ile bulunur.
 
-<br /><img src="/images/image8.png" width="278" height="45" /><br />
+<div style="text-align:center"><br /><img src="/images/image8.png" width="278" height="45" /><br />
 Şekil 4.1.1.1.C : Bağlantı açılmış ve kanal numarasına sahip frekans çıktısı
 </div>
 
@@ -341,7 +341,7 @@ ait verilen analiz edilmesine olanak sağlayan araç olan “*Wireshark*”
 kullanacağız. Linux komut satırından root kullanıcısı olarak Wiresharkı
 açıyoruz.
 
-<br /><img src="/images/image9.png" width="278" height="38" /><br />
+<div style="text-align:center"><br /><img src="/images/image9.png" width="278" height="38" /><br />
 Şekil 4.1.1.2.A : Wiresharkın açılması
 </div>
 
@@ -351,7 +351,7 @@ Arkasından local olarak bilgisayarımıza taktığımız “*dongle*” ile
 Monitörleme ortamını hazırladığımıza göre artık paketleri
 yakalayabiliriz.
 
-<br /><img src="/images/image10.png" width="278" height="48" /><br />
+<div style="text-align:center"><br /><img src="/images/image10.png" width="278" height="48" /><br />
 Şekil 4.1.1.2.B : grgsm\_livemon.py scriptinin çalıştırılması
 </div>
 
@@ -362,14 +362,14 @@ düşündüğümüz frekanstır.
 Bu frekansı alıp gr-gsm livemon’un frequency alanına girdiğimizde
 paketlerimiz yakalanmaya başlıyor.
 
-<br /><img src="/images/image11.png" width="278" height="344" /><br />
+<div style="text-align:center"><br /><img src="/images/image11.png" width="278" height="344" /><br />
 Şekil 4.1.1.2.C : Yakalanan paketlerin terminaldeki hexadecimal karşılıkları
 </div>
 
 Yakalanan paketleri Wireshark’ta görsel bir sıraya dökmek ve analizi
 kolaylaştırmak adına “*gsmtap*” filtresini verebiliriz.
 
-<br /><img src="/images/image12.png" width="278" height="198" /><br />
+<div style="text-align:center"><br /><img src="/images/image12.png" width="278" height="198" /><br />
 
 Şekil 4.1.1.2.D : Yakalanan paketlerin Wireshark monitörleme ortamı görüntüsü
 </div>
@@ -382,7 +382,7 @@ pakelerin içinden “*immediate assignment”* paketlerinden alıyoruz.
 Burada artık alınan paketleri kayıt altın almamız gerekiyor bunun içinde
 “*grgsm\_capture.py”* scriptini kullanıyoruz.
 
-<br /><img src="/images/image13.png" width="278" height="34" /><br />
+<div style="text-align:center"><br /><img src="/images/image13.png" width="278" height="34" /><br />
 Şekil 5.A : Yakalanan paketlerin kayıt altına alınması
 </div>
 
@@ -396,7 +396,7 @@ Daha sonra Kc ve TMSI denilen mobil istasyonun baz istasyonu ile
 bağlantı kurarken doğrulama yaptığı değerler telefona indirilen bir
 uygulama sayesinde alınır ve “*grgsm\_decode.py”* programı çalıştırılır.
 
-<br /><img src="/images/image14.png" width="278" height="25" /><br />
+<div style="text-align:center"><br /><img src="/images/image14.png" width="278" height="25" /><br />
 Şekil 5.B : grgsm\_decode.py scriptinin gerekli parametreler ile paketleri decode
 etmesi
 </div>
@@ -411,7 +411,7 @@ Wireshark paketlerinde paketlerin hangi algoritma ile şifrelendiği
 bilgisi de yer alır. Genelde A5/3 şifreleme algortması ile şifrelenmiş
 olur ki “*grgsm\_decode.py”* bu algoritmayı çözebilir.
 
-<br /><img src="/images/image15.png" width="278" height="30" /><br />
+<div style="text-align:center"><br /><img src="/images/image15.png" width="278" height="30" /><br />
 Şekil 5.C : Decode aşamasında TMSI Kc key’inin kullanılması.
 </div>
 
@@ -422,7 +422,7 @@ yapıldıktan sonra “*assignment command”* paketlerinin birinden
 grgsm\_decode.py programına tekrar alınan bu değerler paremetre olarak
 verilip çıktı dosyası .au.gsm uzantısıyla kayıt edilir.
 
-<br /><img src="/images/image16.png" width="278" height="19" /><br />
+<div style="text-align:center"><br /><img src="/images/image16.png" width="278" height="19" /><br />
 Şekil 5.D : Paketlerden çıkartılan belirleyici bilgilerin tekar grgsm\_decode programına verilmesi
 </div>
 
@@ -431,7 +431,7 @@ sinyallerine dair bir sinyal olup olmadığını bulan bu araç ile
 incelendikte sonra tekrar grgsm\_decode programına sample rate ve test
 aracından alınan dosya eklenerek gerekli parametreler ile verilir.
 
-<br /><img src="/images/image18.png" width="278" height="35" /><br />
+<div style="text-align:center"><br /><img src="/images/image18.png" width="278" height="35" /><br />
 Şekil 5.E : Gerekli parametrelerle decode edilmiş ses dosyasının çıkarılması
 </div>
 
