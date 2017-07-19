@@ -118,7 +118,7 @@ Downlink : Baz istasyonundan mobil cihaza doğru olan trafiktir.
 4.  Operating and Support Subsystem
 
 
-<img src="image3.gif" width="278" height="197" /> 
+<img src="image3.png" width="278" height="197" /> 
 Şekil 2.A : GSM Ağ Mimarisi
 
 **2.1 Mobile Station** : Mobil istasyon mobil bir cihazdır. Teorik
