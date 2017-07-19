@@ -6,7 +6,7 @@ output: pdf_document
 date:   2017-07-11 23:34:00
 categories: posts
 ---
-<div style="text-align:center"><img src="/images/image1.png" width="760" height="250" /><br />
+<div style="text-align:center"><img src="/images/image1.png" width="760" height="350" /><br />
 **RTL-SDR Tabanlı Teknolojiler ile GSM Sinyal Analizi**
 <sup>1</sup> Fatih KARAGÖZ
 
